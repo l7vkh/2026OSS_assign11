@@ -34,12 +34,12 @@ export default function CourseList() {
           <strong>{courses.length}</strong>
         </div>
         <div className="stat">
-          <span>완료</span>
-          <strong className="green">{doneCount}</strong>
+          <span>진행 중</span>
+          <strong className="green">{courses.length - doneCount}</strong>
         </div>
         <div className="stat">
-          <span>진행 중</span>
-          <strong className="blue">{courses.length - doneCount}</strong>
+          <span>완료</span>
+          <strong className="blue">{doneCount}</strong>
         </div>
       </section>
       <section className="panel">
