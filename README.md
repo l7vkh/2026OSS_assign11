@@ -55,7 +55,33 @@
   
 ## Feature Extension
 
-- 구현한 기능
+**구현한 기능**
   
 1. handleAdd() 구현 : 빈 입력 검사, 새 과목 객체 생성, setCourses 호출, 입력창 초기화
-2. handleToggle() 구현 : 
+2. handleToggle() 구현 : map과 spread(...)를 사용하여 해당 id의 completed를 반전
+
+**동작 결과**
+
+- 체크박스와 과목명 입력 후 추가 기능 구현 완료
+  
+## Deployment
+
+https://2026-oss-assign11-kappa.vercel.app/
+
+## Weekly Review
+**새롭게 배운 내용 3가지**
+1. useState의 주요 기능
+2. jsx문서의 기초 문법 내용, class처럼 전달하는 방식
+3. jsx array 문법(map, spread 등)
+
+## 어려웠던 점과 해결 방법
+
+- Array에 대한 문법 지식이 부족해, 코드를 완성함에 있어 계속해서 값을 찾을 수 없다는 오류가 나옴.
+- AI 반복학습과 수업 자료 공부로, 천천히 코드 오타를 지워나가며 해결
+  
+## AI Usage
+
+- 코드를 작성함에 있어, 문법적인 오류나 타입 오류가 발생할 때, 오류 코드를 전달한 뒤, 내가 실수한 문법에 대해 고치는 것 대신 학습 자료를 전달하라고 요청 뒤 자료로 공부하며 해결
+
+- Array에 넘어오면서, 이해해야 하는 난이도가 급상승했음을 느낌. 공부에 소홀하지 않아야겠다고 다짐.
+  
