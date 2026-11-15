@@ -16,12 +16,32 @@ export default function CourseList() {
   // TODO 1 (필수): 과목 추가 기능을 구현하세요.
   function handleAdd(event) {
     event.preventDefault();
+    const name = newName.trim();
+    if (name === "") {
+      alert("빈 값은 추가할 수 없습니다.");
+      return;
+    }
     // TODO: 빈 입력 검사, 새 과목 객체 생성, setCourses 호출, 입력창 초기화
+    const lastId = courses.length > 0 ? courses[courses.length - 1].id : 0;
+    const newCourse = {
+      id: lastId + 1,
+      name: name,
+      category: "Elective",
+      completed: false,
+    }
+    setCourses(previous => [...previous, newCourse]);
+    setNewName("");
   }
 
   // TODO 2 (필수): 완료 상태 변경 기능을 구현하세요.
   function handleToggle(id) {
     // TODO: map과 spread(...)를 사용하여 해당 id의 completed를 반전
+    setCourses(previous => previous.map(course => {
+      if (course.id === id) {
+        return {...course, completed: !course.completed};
+      }
+      return course;
+    }))
   }
 
   const doneCount = courses.filter((course) => course.completed).length;
